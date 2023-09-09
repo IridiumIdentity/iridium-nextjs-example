@@ -2,7 +2,21 @@ This is a [Next.js](https://nextjs.org/) project using [Iridium](https://iridium
 
 ## Getting Started
 
-First, run the development server:
+First, create a `.env.local` file in the root folder of the repo.
+
+```bash
+$ touch .env.local
+```
+
+Then add these properties to it
+
+```bash
+NEXT_PUBLIC_IRIDIUM_DOMAIN=${your-specific-iridium-url}
+NEXT_PUBLIC_IRIDIUM_REDIRECT_URI=http://localhost:3000/callback
+NEXT_PUBLIC_IRIDIUM_CLIENT_ID=${your-iridium-client-id}
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
