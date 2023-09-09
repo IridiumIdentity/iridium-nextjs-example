@@ -15,8 +15,7 @@ export default function Callback() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(iridiumClient.generateExchangeURL(), iridiumClient.generateExchangeHeaders());
-            const isSuccessful = await iridiumClient.processExchangeResponse(response);
+            const isSuccessful = await iridiumClient.exchange();
             if (isSuccessful) {
                 setDisplayMessage("The user has successfully authorized your application")
             } else {
