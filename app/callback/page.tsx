@@ -14,7 +14,7 @@ export default function Callback() {
     }
 
     useEffect(() => {
-        const fetchData = async () => {
+        const exchange = async () => {
             const isSuccessful = await iridiumClient.exchange();
             if (isSuccessful) {
                 setDisplayMessage("The user has successfully authorized your application")
@@ -24,7 +24,16 @@ export default function Callback() {
             return isSuccessful
         }
 
-        fetchData().catch(console.error)
+        const getIdentity = async () => {
+            const userDetails = await iridiumClient.getIdentity();
+            console.log('userDetails', userDetails);
+        }
+
+        exchange().catch(console.error)
+
+        getIdentity().catch(console.error)
+
+
     }, []);
 
     return (
