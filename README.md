@@ -1,7 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project using [Iridium](https://iridium.software) as its authorization platform, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
+You can read the details at [this dev.to article](https://dev.to/joshfischer1108/from-zero-to-secured-with-iridium-and-your-nextjs-app-180g)
+
+## Or..
 First, create a `.env.local` file in the root folder of the repo.
 
 ```bash
